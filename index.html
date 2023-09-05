@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="menyAvPaa">
+        <label id="burger" for="menyAvPaa">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+      <nav id="meny">
+        <ul>
+            <li class="Home" >Home</li>
+            <li class="About">About</li>
+            <li class="Gallery" >Gallery</li>
+        </ul>
+      </nav>
+    </header>
+    <script>
+        console.log( document.querySelector("li.Home"));
+        document.querySelector("li.Home").addEventListener("mouseenter",function(){
+           this.classList.add("scale")
+           document.querySelector("li.About").classList.add("blur")
+           document.querySelector("li.Gallery").classList.add("blur")
+
+        })
+        console.log( document.querySelector("li.About"));
+        document.querySelector("li.About").addEventListener("mouseenter",function(){
+           this.classList.add("scale")
+           document.querySelector("li.Home").classList.add("blur")
+           document.querySelector("li.Gallery").classList.add("blur")
+
+        })
+        console.log( document.querySelector("li.Gallery"));
+        document.querySelector("li.Gallery").addEventListener("mouseenter",function(){
+           this.classList.add("scale")
+           document.querySelector("li.Home").classList.add("blur")
+           document.querySelector("li.About").classList.add("blur")
+
+        })
+        console.log( document.querySelector("li.Home"));
+        document.querySelector("li.Home").addEventListener("mouseleave",function(){
+           this.classList.remove("scale")
+           document.querySelector("li.About").classList.remove("blur")
+           document.querySelector("li.Gallery").classList.remove("blur")
+
+        })
+        console.log( document.querySelector("li.About"));
+        document.querySelector("li.About").addEventListener("mouseleave",function(){
+           this.classList.remove("scale")
+           document.querySelector("li.Home").classList.remove("blur")
+           document.querySelector("li.Gallery").classList.remove("blur")
+
+        })
+        console.log( document.querySelector("li.Gallery"));
+        document.querySelector("li.Gallery").addEventListener("mouseleave",function(){
+           this.classList.remove("scale")
+           document.querySelector("li.Home").classList.remove("blur")
+           document.querySelector("li.About").classList.remove("blur")
+
+        })
+    </script>
+</body>
+</html>
